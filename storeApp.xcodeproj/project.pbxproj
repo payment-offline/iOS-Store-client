@@ -20,6 +20,8 @@
 		BBD950071CC27249004A5A0E /* ItemStoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD950051CC27249004A5A0E /* ItemStoreCollectionViewCell.xib */; };
 		BBD950091CC272DD004A5A0E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD950081CC272DD004A5A0E /* Item.swift */; };
 		BBD9500B1CC27449004A5A0E /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9500A1CC27449004A5A0E /* StoreViewController.swift */; };
+		BBD9500D1CC277D4004A5A0E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9500C1CC277D4004A5A0E /* PayViewController.swift */; };
+		BBD9500F1CC278D1004A5A0E /* PayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9500E1CC278D1004A5A0E /* PayViewModel.swift */; };
 		EAA505ADC6BC9F6007946402 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307831F7EC68D7C656D1C00 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		BBD950051CC27249004A5A0E /* ItemStoreCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemStoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		BBD950081CC272DD004A5A0E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BBD9500A1CC27449004A5A0E /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		BBD9500C1CC277D4004A5A0E /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		BBD9500E1CC278D1004A5A0E /* PayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewModel.swift; sourceTree = "<group>"; };
 		D307831F7EC68D7C656D1C00 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9632BE5C53EC589221ED002 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +112,8 @@
 				BBD950031CC27011004A5A0E /* SoundLib */,
 				BBD94FEF1CC26FE3004A5A0E /* Bridgingfile.h */,
 				BBD950081CC272DD004A5A0E /* Item.swift */,
+				BBD9500C1CC277D4004A5A0E /* PayViewController.swift */,
+				BBD9500E1CC278D1004A5A0E /* PayViewModel.swift */,
 				BBD950041CC27249004A5A0E /* ItemStoreCollectionViewCell.swift */,
 				BBD950051CC27249004A5A0E /* ItemStoreCollectionViewCell.xib */,
 				BBD9500A1CC27449004A5A0E /* StoreViewController.swift */,
@@ -268,8 +274,10 @@
 				BBD950021CC26FE3004A5A0E /* VoiceSendRecognizer.m in Sources */,
 				BBD94FDE1CC26DB3004A5A0E /* AppDelegate.swift in Sources */,
 				BBD950011CC26FE3004A5A0E /* VoiceListenRecognizer.m in Sources */,
+				BBD9500D1CC277D4004A5A0E /* PayViewController.swift in Sources */,
 				BBD94FFF1CC26FE3004A5A0E /* MyPcmPlayerImp.m in Sources */,
 				BBD950091CC272DD004A5A0E /* Item.swift in Sources */,
+				BBD9500F1CC278D1004A5A0E /* PayViewModel.swift in Sources */,
 				BBD950001CC26FE3004A5A0E /* MyPcmRecorderImp.m in Sources */,
 				BBD950061CC27249004A5A0E /* ItemStoreCollectionViewCell.swift in Sources */,
 			);

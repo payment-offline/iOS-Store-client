@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class StoreViewController: UIViewController {
 
@@ -23,12 +25,14 @@ class StoreViewController: UIViewController {
     func updateSelectedItem() {
         self.priceLabelSelected.text = nil
         self.nameLabelSelected.text = nil
+        self.payButton.enabled = false
         
         guard let item = self.selectedItem else {
             return
         }
         self.nameLabelSelected.text = item.name
         self.priceLabelSelected.text = "\(item.price)"
+        self.payButton.enabled = true
     }
     
     override func viewDidLoad() {
@@ -44,6 +48,18 @@ class StoreViewController: UIViewController {
         self.collectionView.backgroundColor = UIColor.clearColor()
         
         self.updateSelectedItem()
+        
+        self.payButton.rx_tap.subscribeNext {
+            guard let _ = self.selectedItem else {
+                return
+            }
+        self.performSegueWithIdentifier("paySegue", sender: nil)
+        }.addDisposableTo(rx_disposeBag)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "paySegue" {
+        }
     }
 }
 

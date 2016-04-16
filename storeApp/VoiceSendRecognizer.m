@@ -19,14 +19,13 @@ static const char* const CODE_BOOK = "0123456789abcdefghijklmnopqrstuvwxyzABCDEF
 @end
 
 ESVoid onSinVoicePlayerStart(ESVoid* cbParam) {
-    NSLog(@"onSinVoicePlayerStart, start");
     VoiceSendRecognizer * vc = (__bridge VoiceSendRecognizer *)cbParam;
     [vc onPlayData:vc];
-    NSLog(@"onPlayData, end");
 }
 
 ESVoid onSinVoicePlayerStop(ESVoid* cbParam) {
-    NSLog(@"onSinVoicePlayerStop");
+    VoiceSendRecognizer * vc = (__bridge VoiceSendRecognizer *)cbParam;
+    [vc completed];
 }
 
 SinVoicePlayerCallback gSinVoicePlayerCallback = {onSinVoicePlayerStart, onSinVoicePlayerStop};
@@ -53,6 +52,10 @@ SinVoicePlayerCallback gSinVoicePlayerCallback = {onSinVoicePlayerStart, onSinVo
         mMaxEncoderIndex = SinVoicePlayer_getMaxEncoderIndex(self.mSinVoicePlayer);
     }
     return self;
+}
+
+- (void)completed {
+    self.sendCompletion();
 }
 
 - (void)onPlayData:(VoiceSendRecognizer *)data {
