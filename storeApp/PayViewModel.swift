@@ -10,81 +10,51 @@ import UIKit
 import RxSwift
 import NSObject_Rx
 
+enum PaymentStatus {
+    case Received
+    case Canceled
+    case Successed
+}
+
 class PayViewModel: NSObject {
 
     private var voiceSendRecognizer = VoiceSendRecognizer()
     private var voiceListenRecognizer = VoiceListenRecognizer()
-    
-//    private func sendString(string: String) -> Observable<Void> {
-//        print("------ send")
-//        return Observable.create({ observer in
-//            self.voiceSendRecognizer.startPlay(string, completion: {
-//                return observer.onNext()
-//            })
-//            return AnonymousDisposable {
-//                self.voiceSendRecognizer.stopPlay()
-//            }
-//        })
-//    }
-//    
-//    private func receiveString() -> Observable<String?> {
-//        print("------ receive")
-//        return Observable.create({ observer in
-//            self.voiceListenRecognizer.startRecord({ string in
-//                observer.onNext(string)
-//            })
-//            return AnonymousDisposable {
-//                self.voiceListenRecognizer.stopRecord()
-//            }
-//        })
-//    }
+    private var amount: Double!
+    private var completionHandler:(PaymentStatus -> Void)!
     
     func sendBackResponse() {
-        print("send back response now")
-        self.voiceSendRecognizer.startPlay("10") {
-            print("send message")
+        self.voiceSendRecognizer.startPlay("\(Int(self.amount!) * 100)") {
             self.receivePayment()
         }
-//        self.sendString("amount\(self.item.price)").subscribe().addDisposableTo(self.rx_disposeBag)
     }
     
     func receivePayment() {
-        print("receive payment")
-        
         self.voiceListenRecognizer.startRecord { (string: String?) in
-            print("string : \(string)")
-            self.voiceListenRecognizer.stopRecord()
             if string == "WTP" {
+                self.completionHandler(.Received)
                 dispatch_async(dispatch_get_main_queue(), {
                     let _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(PayViewModel.sendBackResponse), userInfo: nil, repeats: false)
                 })
             }
+            else if string == "OKC" {
+                self.completionHandler(.Successed)
+            }
+            else if string == "BNE" {
+                self.completionHandler(.Canceled)
+            }
         }
+    }
     
-//        self.receiveString().subscribeNext { string in
-//            print("string received : \(string)")
-//            
-//            self.voiceListenRecognizer.stopRecord()
-//            dispatch_async(dispatch_get_main_queue(), { 
-//                let _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(PayViewModel.sendBackResponse), userInfo: nil, repeats: false)
-//            })
-//        }.addDisposableTo(rx_disposeBag)
+    func makeTransaction(amount: Double) -> Observable<PaymentStatus> {
+        self.amount = amount
         
-//        self.receiveString().flatMap { (text: String?) -> Observable<Bool> in
-//            print("string : \(text)")
-//            guard let text = text else {
-//                return Observable.just(false)
-//            }
-//            print("OK payment !")
-//            return Observable.just(true)
-//        }.subscribeNext { success in
-//            if (success) {
-//                self.voiceListenRecognizer.stopRecord()
-//                self.performSelector(#selector(PayViewModel.sendBackResponse), withObject: nil, afterDelay: 1)
-////                Observable<Int>.timer(0, period: 1, scheduler: MainScheduler.instance).flatMap({ (_: Int) -> Observable<Void> in
-////                    return self.sendString("amount\(self.item.price)")
-////                }).subscribe().addDisposableTo(self.rx_disposeBag)
-//            }
-//        }.addDisposableTo(rx_disposeBag)
+        return Observable.create({ observer in
+            self.completionHandler = { success in
+                observer.onNext(success)
+            }
+            self.receivePayment()
+            return NopDisposable.instance
+        })
     }
 }

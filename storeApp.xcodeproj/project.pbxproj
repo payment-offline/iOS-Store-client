@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBA1874C1CC2A36400DF2945 /* PromptAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA1874B1CC2A36400DF2945 /* PromptAlert.swift */; };
 		BBD94FDE1CC26DB3004A5A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD94FDD1CC26DB3004A5A0E /* AppDelegate.swift */; };
 		BBD94FE31CC26DB3004A5A0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD94FE11CC26DB3004A5A0E /* Main.storyboard */; };
 		BBD94FE51CC26DB3004A5A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD94FE41CC26DB3004A5A0E /* Assets.xcassets */; };
@@ -16,10 +17,7 @@
 		BBD950001CC26FE3004A5A0E /* MyPcmRecorderImp.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD94FF71CC26FE3004A5A0E /* MyPcmRecorderImp.m */; };
 		BBD950011CC26FE3004A5A0E /* VoiceListenRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD94FFB1CC26FE3004A5A0E /* VoiceListenRecognizer.m */; };
 		BBD950021CC26FE3004A5A0E /* VoiceSendRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD94FFD1CC26FE3004A5A0E /* VoiceSendRecognizer.m */; };
-		BBD950061CC27249004A5A0E /* ItemStoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD950041CC27249004A5A0E /* ItemStoreCollectionViewCell.swift */; };
-		BBD950071CC27249004A5A0E /* ItemStoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD950051CC27249004A5A0E /* ItemStoreCollectionViewCell.xib */; };
 		BBD950091CC272DD004A5A0E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD950081CC272DD004A5A0E /* Item.swift */; };
-		BBD9500B1CC27449004A5A0E /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9500A1CC27449004A5A0E /* StoreViewController.swift */; };
 		BBD9500D1CC277D4004A5A0E /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9500C1CC277D4004A5A0E /* PayViewController.swift */; };
 		BBD9500F1CC278D1004A5A0E /* PayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9500E1CC278D1004A5A0E /* PayViewModel.swift */; };
 		EAA505ADC6BC9F6007946402 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D307831F7EC68D7C656D1C00 /* Pods.framework */; };
@@ -27,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		942F8082216EB430B73588B8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BBA1874B1CC2A36400DF2945 /* PromptAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptAlert.swift; sourceTree = "<group>"; };
 		BBD94FDA1CC26DB3004A5A0E /* storeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD94FDD1CC26DB3004A5A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD94FE21CC26DB3004A5A0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,10 +47,7 @@
 		BBD94FFB1CC26FE3004A5A0E /* VoiceListenRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceListenRecognizer.m; sourceTree = "<group>"; };
 		BBD94FFC1CC26FE3004A5A0E /* VoiceSendRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceSendRecognizer.h; sourceTree = "<group>"; };
 		BBD94FFD1CC26FE3004A5A0E /* VoiceSendRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceSendRecognizer.m; sourceTree = "<group>"; };
-		BBD950041CC27249004A5A0E /* ItemStoreCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStoreCollectionViewCell.swift; sourceTree = "<group>"; };
-		BBD950051CC27249004A5A0E /* ItemStoreCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemStoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		BBD950081CC272DD004A5A0E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		BBD9500A1CC27449004A5A0E /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		BBD9500C1CC277D4004A5A0E /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		BBD9500E1CC278D1004A5A0E /* PayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewModel.swift; sourceTree = "<group>"; };
 		D307831F7EC68D7C656D1C00 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,11 +108,9 @@
 				BBD950031CC27011004A5A0E /* SoundLib */,
 				BBD94FEF1CC26FE3004A5A0E /* Bridgingfile.h */,
 				BBD950081CC272DD004A5A0E /* Item.swift */,
+				BBA1874B1CC2A36400DF2945 /* PromptAlert.swift */,
 				BBD9500C1CC277D4004A5A0E /* PayViewController.swift */,
 				BBD9500E1CC278D1004A5A0E /* PayViewModel.swift */,
-				BBD950041CC27249004A5A0E /* ItemStoreCollectionViewCell.swift */,
-				BBD950051CC27249004A5A0E /* ItemStoreCollectionViewCell.xib */,
-				BBD9500A1CC27449004A5A0E /* StoreViewController.swift */,
 				BBD94FDD1CC26DB3004A5A0E /* AppDelegate.swift */,
 				BBD94FE11CC26DB3004A5A0E /* Main.storyboard */,
 				BBD94FE41CC26DB3004A5A0E /* Assets.xcassets */,
@@ -211,7 +205,6 @@
 				BBD94FE81CC26DB3004A5A0E /* LaunchScreen.storyboard in Resources */,
 				BBD94FE51CC26DB3004A5A0E /* Assets.xcassets in Resources */,
 				BBD94FE31CC26DB3004A5A0E /* Main.storyboard in Resources */,
-				BBD950071CC27249004A5A0E /* ItemStoreCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,16 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD9500B1CC27449004A5A0E /* StoreViewController.swift in Sources */,
 				BBD950021CC26FE3004A5A0E /* VoiceSendRecognizer.m in Sources */,
 				BBD94FDE1CC26DB3004A5A0E /* AppDelegate.swift in Sources */,
 				BBD950011CC26FE3004A5A0E /* VoiceListenRecognizer.m in Sources */,
+				BBA1874C1CC2A36400DF2945 /* PromptAlert.swift in Sources */,
 				BBD9500D1CC277D4004A5A0E /* PayViewController.swift in Sources */,
 				BBD94FFF1CC26FE3004A5A0E /* MyPcmPlayerImp.m in Sources */,
 				BBD950091CC272DD004A5A0E /* Item.swift in Sources */,
 				BBD9500F1CC278D1004A5A0E /* PayViewModel.swift in Sources */,
 				BBD950001CC26FE3004A5A0E /* MyPcmRecorderImp.m in Sources */,
-				BBD950061CC27249004A5A0E /* ItemStoreCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
